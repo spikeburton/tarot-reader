@@ -1,0 +1,17 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
