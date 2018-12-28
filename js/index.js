@@ -46,23 +46,33 @@ function deal() {
   }
   
   // Is the card upright or reversed?
+  // Make sure there is a higher probability of the card being upright
   function reversed() {
     return Math.random() > 0.7 ? true : false;
   }
   
   // Fill the HTML with the content
   for(let i = 0; i < 3; i++) {
+    // if a card from the Minor Arcana, display the value at the top
+    // and the suit at the bottom of the card
     if(DECK[i].minor) {
-      document.getElementById(`num_${i+1}`).style.fontWeight = "normal";
+      document.getElementById(`num_${i+1}`).style.opacity = "1";
       document.getElementById(`num_${i+1}`).innerHTML = DECK[i].value + " of";
     } else {
-      document.getElementById(`num_${i+1}`).style.fontWeight = "600";
+    // otherwise it's a card from the Major Arcana
+    // display an opaque card number at the top
+    // display the card title at the bottom
+      document.getElementById(`num_${i+1}`).style.opacity = "0.7";
       document.getElementById(`num_${i+1}`).innerHTML = DECK[i].value;
     }
     document.getElementById(`suit_${i+1}`).innerHTML = DECK[i].suit;
+    // if the card is reversed, display that on the card
     if(reversed()) {
-      document.getElementById(`suit_${i+1}`).innerHTML += " (reversed)";
+      document.getElementById(`rev_${i+1}`).innerHTML = "(reversed)";
       // document.getElementById(`card_${i+1}`).style.transform = "rotate(180deg)";
+      // --- come back to this ---
+    } else {
+      document.getElementById(`rev_${i+1}`).innerHTML = "";
     }
   }
 }
