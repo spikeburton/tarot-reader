@@ -9,7 +9,7 @@ const MAJOR_ARCANA = [
   'The Tower','The Star','The Moon','The Sun',
   'Judgement','The World'
 ]
-var DECK = [];
+let DECK = [];
 
 // Build the Minor Arcana deck
 for(let i = 0; i < SUITS.length; i++) {
@@ -33,7 +33,8 @@ for(let i = 0; i < MAJOR_ARCANA.length; i++) {
   DECK.push(card);
 }
 
-function deal() {
+// ES6 arrow function
+const deal = () => {
   // Shuffle the DECK!
   // Swap the location of 2 random cards 1200 times for good measure
   for(let i = 0; i < 1200; i++) {
@@ -47,7 +48,8 @@ function deal() {
   
   // Is the card upright or reversed?
   // Make sure there is a higher probability of the card being upright
-  function reversed() {
+  // Again, an arrow function - this time as a closure
+  let reversed = () => {
     return Math.random() > 0.7 ? true : false;
   }
   
