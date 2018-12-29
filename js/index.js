@@ -62,7 +62,7 @@ const deal = () => {
       document.getElementById(`num_${i+1}`).innerHTML = DECK[i].value + " of";
     } else {
     // otherwise it's a card from the Major Arcana
-    // display an opaque card number at the top
+    // display card number at the top
     // display the card title at the bottom
       document.getElementById(`num_${i+1}`).style.opacity = "0.7";
       document.getElementById(`num_${i+1}`).innerHTML = DECK[i].value;
