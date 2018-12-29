@@ -3,5 +3,5 @@ A simple web app that I created using vanilla HTML/CSS/JavaScript. Press the "De
 
 NOTE: Future update may include interpretations for each card.
 ## Screenshot
----
 ![The app in action](./screenshot.png?raw=true "Tarot Reader")
+---
