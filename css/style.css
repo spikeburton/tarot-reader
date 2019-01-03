@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   padding: 0;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   background: azure;
 }
 
@@ -16,7 +16,6 @@ h1 {
   text-align: center;
   min-width: 600px;
   min-height: 400px;
-  height: 400px;
 }
 
 .card {
@@ -24,7 +23,7 @@ h1 {
   display: inline-block;
   width: 160px;
   height: 200px;
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
   color: dimgray;
   border: 1px solid #CCC;
   border-radius: 10px;
